@@ -33,7 +33,7 @@ layout = html.Div(
             className="main-row",
             style={"paddingTop": '5rem',
                    "marginBottom":"2rem"}),
-
+        html.Div([html.H2('熱門作品 (≧∇≦)b')],className='subtitle'),
         html.Div([
             html.Div([
                 html.Div([html.Div([html.Img(src='assets/images/jujutsu.png')], className='itemimage'), html.A([html.Span(['咒術迴戰'], className='imagetitle')], className='imageurl', href="https://ani.gamer.com.tw/animeVideo.php?sn=18626", target="_blank")
@@ -67,13 +67,47 @@ layout = html.Div(
                           ], className='itemsize')
             ], className='card')
         ], className='action'),
+        html.Div([html.H2('一月新番 ლ(´ڡ`ლ)')],className='subtitle2'),
+        html.Div([
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/jitsuryokuS3.png')], className='itemimage'), html.A([html.Span(['歡迎來到實力至上主義的教室 第三季'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=133633", target="_blank")
+                          ], className='itemsize')
+            ], className='card'),
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/danjyonhan.png')], className='itemimage'), html.A([html.Span(['迷宮飯'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=126313", target="_blank")
+                          ], className='itemsize')
+            ], className='card'),
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/sureibu.png')], className='itemimage'), html.A([html.Span(['魔都精兵的奴隸'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=120671", target="_blank")
+                          ], className='itemsize')
+            ], className='card'),
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/sasaki.png')], className='itemimage'), html.A([html.Span(['佐佐木與文鳥小嗶'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=134321", target="_blank")
+                          ], className='itemsize')
+            ], className='card'),
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/yubisaki.png')], className='itemimage'), html.A([html.Span(['指尖相觸，戀戀不捨'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=133896", target="_blank")
+                          ], className='itemsize')
+            ], className='card'),
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/kingdom.png')], className='itemimage'), html.A([html.Span(['王者天下 第五季'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=134333", target="_blank")
+                          ], className='itemsize')
+            ], className='card'),
+            html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/dangers.png')], className='itemimage'), html.A([html.Span(['我內心的糟糕念頭 第二季'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=133422", target="_blank")
+                          ], className='itemsize')
+            ], className='card'), html.Div([
+                html.Div([html.Div([html.Img(src='assets/images/mofumofu.png')], className='itemimage'), html.A([html.Span(['為了在異世界也能摸摸毛茸茸努力'], className='imagetitle')], className='imageurl', href="https://acg.gamer.com.tw/acgDetail.php?s=129541", target="_blank")
+                          ], className='itemsize')
+            ], className='card')
+        ], className='action2'),
 
         dbc.Modal(
             [],
             id="modal",
             className='modalsize',
             is_open=False,
-            size='lg'
+            size='lg',
         )
 
 
@@ -124,6 +158,15 @@ def selectedRow(selected_rows):
         elif df.iloc[selected_rows[0]][0] == '叫我對大哥 (TV版)':
             info = html.Div([html.Div(html.A([html.Img(src='assets/images/ore2.png')], href="https://ani.gamer.com.tw/animeVideo.php?sn=23349", target="_blank"), className='infoimage'), html.Div([html.H1([df.iloc[selected_rows[0]][0]], style={'color': 'rgba(255, 208, 0, 0.89'}), html.H3([f'監督：{df.iloc[selected_rows[0]][6]}'], style={'color': 'rgba(0, 238, 255, 0.842', 'marginTop': '25px'}), html.H3([f'製作公司：{df.iloc[selected_rows[0]][7]}'], style={'color': 'rgba(0, 238, 255, 0.842'}),
                              html.H3(['以 おぷうのきょうだい所著漫畫為原著改編的動畫《老子是、津島（暫譯，俺、つしま）》，描述一位實際上是老婆婆、卻被稱為「老爺爺」（田中真弓配音演出）的老人，與眾多貓咪日常的漫畫，並以某天忽然出現在老爺爺家庭院的一隻貓「津島（大塚明夫配音演出）」為中心。預定將推出的動畫作品由 青木純執導，動畫公司則交由曾推出有《劇場版 角落小夥伴 繪本中的秘密》的 Fanworks 與 SPACE NEKO COMPANY 聯手製作。'], style={'marginTop': '25px'})], style={'padding': '15px'})], className='info')
+        elif df.iloc[selected_rows[0]][0] == '汪汪與喵喵':
+            info = html.Div([html.Div(html.A([html.Img(src='assets/images/dogcat2.png')], href="https://ani.gamer.com.tw/animeVideo.php?sn=29892", target="_blank"), className='infoimage'), html.Div([html.H1([df.iloc[selected_rows[0]][0]], style={'color': 'rgba(255, 208, 0, 0.89'}), html.H3([f'監督：{df.iloc[selected_rows[0]][6]}'], style={'color': 'rgba(0, 238, 255, 0.842', 'marginTop': '25px'}), html.H3([f'製作公司：{df.iloc[selected_rows[0]][7]}'], style={'color': 'rgba(0, 238, 255, 0.842'}),
+                             html.H3(['《汪汪與喵喵》是漫畫作家-松本英吉老師創作之作品這部動畫小品就由汪汪跟喵喵，兩隻都想養的貪心主人的故事來說起。故事圍繞在瘋狂向主人撒嬌超可愛的汪汪與雖然看起來很兇但又無法討厭牠的喵喵只要和他們在一起每天都超開心的日常生活。那你是貓派還是狗派呢？'], style={'marginTop': '25px'})], style={'padding': '15px'})], className='info')
+        elif df.iloc[selected_rows[0]][0] == '鬼滅之刃 刀匠村篇':
+            info = html.Div([html.Div(html.A([html.Img(src='assets/images/kimetsuSwordsmithVillage2.png')], href="https://ani.gamer.com.tw/animeVideo.php?sn=33295", target="_blank"), className='infoimage'), html.Div([html.H1([df.iloc[selected_rows[0]][0]], style={'color': 'rgba(255, 208, 0, 0.89'}), html.H3([f'監督：{df.iloc[selected_rows[0]][6]}'], style={'color': 'rgba(0, 238, 255, 0.842', 'marginTop': '25px'}), html.H3([f'製作公司：{df.iloc[selected_rows[0]][7]}'], style={'color': 'rgba(0, 238, 255, 0.842'}),
+                             html.H3(['自從上弦之陸·墮姬和妓夫太郎被斬殺後導致上弦的位置出現空缺的緣故，因此猗窩座和其他上弦成員都被無慘召喚到無限城內，無慘面對上弦出現空缺的問題感到震怒並且覺得上弦成員應該要盡心極力地找出「藍色彼岸花」與殲滅鬼殺隊的職責，於是他指派上弦之肆·半天狗和上弦之伍·玉壺前往某個地點去執行任務。另一方面，在蝴蝶屋療傷長達兩個月的炭治郎得知鋼鐵塜不再給自己一把新刀的消息，因此他在蝴蝶屋的寺內清、中原澄與高田菜穗的建議下前往刀匠村再次請求鋼鐵塜幫忙打造新刀，當炭治郎抵達遇刀匠村遇到戀柱·甘露寺蜜璃和霞柱·時透無一郎以及不死川玄彌。'], style={'marginTop': '25px'})], style={'padding': '15px'})], className='info')
+        elif df.iloc[selected_rows[0]][0] == 'IDOLiSH7 - 偶像星願 - Third BEAT！':
+            info = html.Div([html.Div(html.A([html.Img(src='assets/images/IDOLiSH72.png')], href="https://ani.gamer.com.tw/animeVideo.php?sn=23368", target="_blank"), className='infoimage'), html.Div([html.H1([df.iloc[selected_rows[0]][0]], style={'color': 'rgba(255, 208, 0, 0.89'}), html.H3([f'監督：{df.iloc[selected_rows[0]][6]}'], style={'color': 'rgba(0, 238, 255, 0.842', 'marginTop': '25px'}), html.H3([f'製作公司：{df.iloc[selected_rows[0]][7]}'], style={'color': 'rgba(0, 238, 255, 0.842'}),
+                             html.H3(['改編自由 BANDAI NAMCO Online 發行、並由漫畫家 種村有菜人擔任人物原案設定的手機遊戲，電視動畫《IDOLiSH7 - 偶像星願 -》描繪 7 位充滿個性的偶像，共組團體「IDOLiSH7」後在舞台上與同為偶像團體的「TRIGGER」等人競爭、逐漸成長的軌跡。'], style={'marginTop': '25px'})], style={'padding': '15px'})], className='info')
         else:
             info = dbc.ModalHeader(dbc.ModalTitle(
                 "尚未更新資料"), class_name='infotitle')
