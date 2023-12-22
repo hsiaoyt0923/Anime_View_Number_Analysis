@@ -14,6 +14,15 @@
     color: rgba(255, 208, 0, 0.89);
 }
 
+.subtitle {
+    margin-bottom: 30px;
+}
+
+.subtitle2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
 .showselect {
     /* background-color: rgba(165, 42, 42, 0.411); */
     padding: 0;
@@ -78,6 +87,11 @@ body {
     /* background-color: black; */
 }
 
+#modal {
+    border: none;
+    background-color: black;
+}
+
 
 .modalsize {
     max-height: 800px;
@@ -86,7 +100,7 @@ body {
 }
 
 .infotitle {
-    /* background-color: black; */
+    background-color: black;
     color: rgba(255, 208, 0, 0.89);
 }
 
@@ -95,6 +109,7 @@ body {
     background-color: black;
     color: #fff;
 }
+
 .infoimage {
     height: auto;
     width: auto;
@@ -106,6 +121,13 @@ body {
     max-width: 1400px;
     display: flex;
     background: no-repeat center/cover;
+}
+
+.action2 {
+    max-width: 1400px;
+    display: flex;
+    background: no-repeat center/cover;
+    margin-bottom: 30px;
 }
 
 .card {
