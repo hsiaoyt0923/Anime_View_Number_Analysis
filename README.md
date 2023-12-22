@@ -25,24 +25,18 @@
 
 
 
-### 一、專案組名：動畫觀看數統計
+### 一、專案名：動畫觀看數統計_以巴哈姆特動畫瘋為例
 ### 二、專案組員：蕭翊廷、周華相
 ### 三、專案網址：
-- https://github.com/spread11-afk/Car_Accident_Reparaion_Visualization/tree/main
+- https://github.com/hsiaoyt0923/Anime_View_Number_Analysis
+- https://anime-view-number-analysis.onrender.com/
 
-### 四、專案目的：動畫觀看數統計
-1. 使用時機：
-   - 民眾發生車禍案件時，可參考法院判決預估和解金額，作為和解談判之依據。
-   - 視覺化呈現過往判決中賠償金額之分佈。
-2. 程式集：CarAccident.py
-### 五、資料說明：
-1. 巴哈姆特動畫平台https://ani.gamer.com.tw/
+### 四、專案目的：找出當前熱門題材、發現動畫化作品趨勢
+### 五、資料來源：
+1. 巴哈姆特動畫平台 https://ani.gamer.com.tw/
+2. ACG Secrets https://acgsecrets.hk/
 
 ![產生圖片](./操作手冊/資料來源1.png)
 
-2. 資料篩選: 
-   - 以「裁判書」為篩選條件，下載自202201~202307之所有案件。
-   - 以判決字號篩選交通事件。
-   - 以正規則表示法，去除裁定等非實體判決之訴訟事件。
-3. 資料範圍：
-   - 202001~202304之所有在巴哈姆特的動畫。
+2. 資料範圍：
+   - 202001~202306目前尚在巴哈姆特動畫瘋上的動畫。
